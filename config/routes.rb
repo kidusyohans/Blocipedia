@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
+
+
   get 'user/index'
 
   get 'user/show'
 
-  get 'welcome/index'
 
-  get 'welcome/about'
 
-  devise_for :users
+  resources :wikis
+  
+  get 'about' => 'welcome#about'
 
  root to: 'welcome#index'
 end
