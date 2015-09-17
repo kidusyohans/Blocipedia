@@ -7,7 +7,7 @@ require 'faker'
     email: Faker::Internet.email,
     password: Faker::Lorem.characters(10)
     )
-  user.skip_confirmation!
+  #user.skip_confirmation!
   user.save
 end
  users = User.all
@@ -31,7 +31,7 @@ puts "#{wikis.count} wikis created."
    password: 'helloworld',
    role:     'admin'
  )
- admin.skip_confirmation!
+ #admin.skip_confirmation!
  admin.save!
  
  # Create a premium
@@ -41,7 +41,7 @@ puts "#{wikis.count} wikis created."
    password: 'helloworld',
    role:     'premium'
  )
- premium.skip_confirmation!
+ #premium.skip_confirmation!
  premium.save!
  
  # Create a standard
@@ -50,7 +50,7 @@ puts "#{wikis.count} wikis created."
    email:    'standard@example.com',
    password: 'helloworld'
  )
- standard.skip_confirmation!
+ #standard.skip_confirmation!
  standard.save!
  
  

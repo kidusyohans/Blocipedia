@@ -11,8 +11,6 @@ gem 'bootstrap-sass'
 group :production do
    gem 'pg'
    gem 'rails_12factor'
-   gem 'faker'
-   gem "figaro"
    gem 'puma', group: :production
  end
  
@@ -41,6 +39,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 
 gem 'faker'
+
+gem 'stripe'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
