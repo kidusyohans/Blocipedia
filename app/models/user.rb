@@ -18,6 +18,12 @@ class User < ActiveRecord::Base
     role == 'premium'
   end
   
+  def downgrade_wikis
+    Wiki.where(user: self, public: false).each do |wiki|
+      wiki.update_attributes(public: true)
+    end
+  end
+  
   
   
 end

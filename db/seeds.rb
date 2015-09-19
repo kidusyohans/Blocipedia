@@ -3,7 +3,6 @@ require 'faker'
 ## Create Users
 5.times do
   user = User.new(
-    name: Faker::Name.name,
     email: Faker::Internet.email,
     password: Faker::Lorem.characters(10)
     )
@@ -26,7 +25,6 @@ puts "#{wikis.count} wikis created."
 
 # # Create an admin user
  admin = User.new(
-   name:     'Admin User',
    email:    'admin@example.com',
    password: 'helloworld',
    role:     'admin'
@@ -36,21 +34,19 @@ puts "#{wikis.count} wikis created."
  
  # Create a premium
  moderator = User.new(
-   name:     'Premium User',
    email:    'premium@example.com',
    password: 'helloworld',
    role:     'premium'
  )
  #premium.skip_confirmation!
- premium.save!
+ moderator.save!
  
  # Create a standard
  member = User.new(
-   name:     'Standard User',
    email:    'standard@example.com',
    password: 'helloworld'
  )
  #standard.skip_confirmation!
- standard.save!
+ member.save!
  
  
